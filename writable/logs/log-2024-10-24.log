@@ -1,0 +1,41 @@
+ERROR - 2024-10-24 10:14:45 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_telefonia' in C:\laragon\www\telefonia_ci4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\laragon\www\telefonia_ci4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'db_telefonia', 3306, '', 0)
+#1 C:\laragon\www\telefonia_ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\telefonia_ci4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\telefonia_ci4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\telefonia_ci4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\telefonia_ci4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\telefonia_ci4\app\Controllers\ClienteControlador.php(10): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(934): App\Controllers\ClienteControlador->verClientes()
+#8 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteControlador))
+#9 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\telefonia_ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_telefonia' in C:\laragon\www\telefonia_ci4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\laragon\www\telefonia_ci4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\telefonia_ci4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\telefonia_ci4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\telefonia_ci4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\telefonia_ci4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\telefonia_ci4\app\Controllers\ClienteControlador.php(10): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(934): App\Controllers\ClienteControlador->verClientes()
+#7 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteControlador))
+#8 C:\laragon\www\telefonia_ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\telefonia_ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-10-24 10:14:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_telefonia'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clientes`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ClienteControlador.php(10): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ClienteControlador->verClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClienteControlador))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

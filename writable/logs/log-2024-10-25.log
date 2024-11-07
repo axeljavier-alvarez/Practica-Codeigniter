@@ -1,0 +1,11 @@
+CRITICAL - 2024-10-25 14:55:15 --> Undefined variable $datosClientes
+in APPPATH\Views\vista_clientes.php on line 35.
+ 1 APPPATH\Views\vista_clientes.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosClientes', 'APPPATH\\Views\\vista_clientes.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\vista_clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('vista_clientes', [], true)
+ 5 APPPATH\Controllers\UsuariosController.php(29): view('vista_clientes')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UsuariosController->iniciarSesion()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuariosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
